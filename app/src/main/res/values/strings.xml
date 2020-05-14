@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EcwidTestApp</string>
+    <string name="title_activity_maps">Карта</string>
+    <string name="product_title">Название товара</string>
+    <string name="product_price">Цена товара</string>
+    <string name="select_warehouse_label">Выберите склад</string>
+    <string name="save">Сохранить</string>
+    <string name="delete">Удалить</string>
+    <string name="selected">Выбрано %d</string>
+</resources>

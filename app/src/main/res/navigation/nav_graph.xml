@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/productsListFragment">
+
+    <fragment
+        android:id="@+id/productsListFragment"
+        android:name="ru.ecwid.testapp.ui.ProductsListFragment"
+        android:label="ProductsListFragment"
+        tools:layout="@layout/fragment_products_list">
+
+        <action
+            android:id="@+id/action_add"
+            app:destination="@id/addFragment">
+        </action>
+
+        <action
+            android:id="@+id/action_edit"
+            app:destination="@id/editFragment">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="ru.ecwid.testapp.ui.AddProductFragment"
+        android:label="DetailsFragment"
+        tools:layout="@layout/fragment_product_details">
+
+        <action
+            android:id="@+id/action_to_maps"
+            app:destination="@id/maps"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="ru.ecwid.testapp.ui.EditProductFragment"
+        android:label="DetailsFragment"
+        tools:layout="@layout/fragment_product_details">
+
+        <argument
+            android:name="productId"
+            android:defaultValue="-1L"
+            app:argType="long" />
+
+        <action
+            android:id="@+id/action_to_maps"
+            app:destination="@id/maps"/>
+    </fragment>
+
+    <activity
+        android:id="@+id/maps"
+        android:name="ru.ecwid.testapp.MapsActivity"
+        android:label="activity_maps"
+        tools:layout="@layout/activity_maps" >
+
+        <argument
+            android:name="list"
+            app:argType="ru.ecwid.testapp.models.WarehouseItem[]" />
+    </activity>
+</navigation>
