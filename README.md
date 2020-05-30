@@ -25,3 +25,6 @@
 - Navigation component
 - Google Maps
 
+## TODO
+- [ ] Поиск товаров
+- [ ] импорт/экспорт товаров из/в файл
